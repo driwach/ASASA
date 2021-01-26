@@ -1,0 +1,39 @@
+<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center divpr">
+  <h1 class="display-6 pb-5 pe-5" *ngIf="finished">Resultat</h1>
+  <div class="row" *ngIf="suspicious">
+
+    <div class="col-2 bg-danger text-white pe-5 result">
+    Les vostres respostes indiquen que heu de trucar al vostre metge i descriure els símptomes. <br>
+    o podeu trobar a baix a la mapa el hospital mes prop del teu municipi i el podeu trucar i pereguntar.
+    <iframe src="https://www.google.com/maps/d/embed?mid=1x5dt3qUVioMX0774Hwuwk5wISG0&hl=es" class=" pt-5 map"></iframe>
+  </div>
+  </div>
+
+  <div class="row" *ngIf="!suspicious && finished">
+    <div class="col-2 bg-success text-white pe-5 result">
+      Les vostres respostes indiquen que hi ha un probabilitat baixa de tenir el virus.s <br> es recomonable que truquis el vostre metge si el vostre situacio empitjora.
+
+    </div>
+
+  </div>
+  <button  type="button" *ngIf="finished" class="btn btn-outline-warning mt-3" (click)="reset()">torneu-ho a provar</button>
+
+  <h1 class="display-1 pb-5 pe-5" *ngIf="!finished">Prova</h1>
+
+
+
+
+
+  <div class="form-group " *ngIf="!finished">
+
+
+    <label class="h3" >Options:</label>
+    <div class="h4 pb-5">Té algun dels símptomes següents?</div>
+      <div class="row row-cols-2" *ngFor="let option of options">
+        <div class="col ">{{option.name}}</div>
+        <input class="col pe-5" type="checkbox" value="{{option.value}}" [(ngModel)]="option.checked">
+      </div>
+    <button class="mt-5 btn-outline-primary w-25" type="button" (click)="showresutls()">Comprobar</button>
+  </div>
+
+  </div>

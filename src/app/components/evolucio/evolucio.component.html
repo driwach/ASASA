@@ -1,0 +1,39 @@
+<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center ">
+  <h1 class="display-4">Evolució del Covid-19 En Espanya</h1>
+  <h6 class="display-6">({{datas[0].date}})</h6>
+  <div class="pt-5">
+<table class="table table-bordered border-primary">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">Estat</th>
+    <th scope="col">Total Casos</th>
+    <th scope="col">Casos Avui</th>
+    <th scope="col">Total Morts</th>
+    <th scope="col">Morts Avui</th>
+    <th scope="col">Total Recuperats</th>
+    <th scope="col">Recuperats Avui</th>
+    <th scope="col">Total Hospitalitzat</th>
+    <th scope="col">Nou Hospitalitzat</th>
+    <th scope="col">Total en UCI</th>
+    <th scope="col">Nous en UCI</th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let data of datas">
+    <th scope="row">{{data.name_es}}</th>
+    <td>{{data.today_confirmed}}</td>
+    <td>{{data.today_new_confirmed}}</td>
+    <td>{{data.today_deaths}}</td>
+    <td>{{data.today_new_deaths}}</td>
+    <td>{{data.today_recovered}}</td>
+    <td>{{data.today_new_recovered}}</td>
+    <td>{{data.today_total_hospitalised_patients}}</td>
+    <td>{{data.today_new_total_hospitalised_patients}}</td>
+    <td>{{data.today_intensive_care}}</td>
+    <td>{{data.today_new_intensive_care}}</td>
+  </tr>
+  </tbody>
+</table>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+
+.images{
+  height: 170px;
+  padding-top: 15px;
+}
+
+.stretched-link::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: auto;
+  content: "";
+  background-color: rgba(0,0,0,0);
+}
+.caixes{
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 10px; /* Added */
+}
+.box{
+  max-width: 400px;
+}
+
+.btnwidth{
+  width: 350px;
+}

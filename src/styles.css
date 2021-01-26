@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+.divpr{
+  max-width: 900px;
+}
+@media (max-width: 576px) {
+  .smallc{
+    padding-left: 80px;
+  }
+}
+
+.map {
+  width: 800px;
+  height: 600px;
+}
